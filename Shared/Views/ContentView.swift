@@ -11,8 +11,8 @@ struct ContentView: View
     @ObservedObject var temperatureViewModel : TemperatureViewModel
     
     @State private var numberOfUnit = ""
-    @State private var inputUnit = 0
-    @State private var outputUnit = 0
+    @State private var inputUnit = 0.0
+    @State private var outputUnit = 0.0
     
     var units = ["Celsius", "Fahrenheit", "Kelvin"]
 

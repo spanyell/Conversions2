@@ -13,7 +13,7 @@ class TemperatureViewModel : ObservableObject //  Conforms to the ObservableObje
 {
     @Published var convertedTemperature = Temperature(temperature: 0.0)
     
-    func convertTemperature(numberOfUnit: String, inputUnit: Int, outputUnit: Int)
+    func convertTemperature(numberOfUnit: String, inputUnit: Double, outputUnit: Double)
     {
         let numberOfUnits = Double(numberOfUnit) ?? 0
         

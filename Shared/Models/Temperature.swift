@@ -8,7 +8,8 @@
 //
 import Foundation
 
-struct Temperature : Identifiable  //  Conforms to the Identifiable protocol which requires that the object has an id property to be identified as unique when used in lists
+struct Temperature : Identifiable
+//  Conforms to the Identifiable protocol which requires that the object has an id property to be identified as unique when used in lists
 {
     let id = UUID()  //  Creates an id that is guaranteed to be unique
     var temperature: Double
