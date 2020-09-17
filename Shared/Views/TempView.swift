@@ -1,12 +1,12 @@
 //
-//  ContentView.swift
+//  TempView.swift
 //  Shared
 //
 //  Created by Dan Beers on 9/15/20.
 //
 import SwiftUI
 
-struct ContentView: View
+struct TempView: View
 {
     @ObservedObject var temperatureViewModel : TemperatureViewModel
     
@@ -24,7 +24,7 @@ struct ContentView: View
             {
                 Section
                 {
-                    TextField("Enter the number of units here", text: $numberOfUnit)
+                    TextField("Enter the number of units here:", text: $numberOfUnit)
                         .keyboardType(.decimalPad)
                 }
                 
@@ -88,10 +88,10 @@ struct ContentView: View
 }
 
 
-struct ContentView_Previews: PreviewProvider
+struct TempView_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        ContentView(temperatureViewModel: TemperatureViewModel())
+        TempView(temperatureViewModel: TemperatureViewModel())
     }
 }

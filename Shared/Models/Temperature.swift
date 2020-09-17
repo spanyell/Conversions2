@@ -15,6 +15,12 @@ struct Temperature : Identifiable
     var temperature: Double
 }
 
+struct Length : Identifiable
+{
+    let id = UUID()
+    var length: Double
+}
+
 extension Double
 {
     func formattedDouble(value: Double) -> Double
