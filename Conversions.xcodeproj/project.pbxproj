@@ -15,6 +15,10 @@
 		2BBF2319251120790003D115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF22EE251120670003D115 /* ContentView.swift */; };
 		2BBF231A251120790003D115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBF22EF251120790003D115 /* Assets.xcassets */; };
 		2BBF231B251120790003D115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBF22EF251120790003D115 /* Assets.xcassets */; };
+		91DA0CEE2512B28F00A4CD47 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA0CED2512B28F00A4CD47 /* Temperature.swift */; };
+		91DA0CF02512B2D700A4CD47 /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA0CEF2512B2D700A4CD47 /* TemperatureViewModel.swift */; };
+		91DA0CF22512BD5500A4CD47 /* Button Styles in Resources */ = {isa = PBXBuildFile; fileRef = 91DA0CF12512BD5500A4CD47 /* Button Styles */; };
+		91DA0CF32512BD5500A4CD47 /* Button Styles in Resources */ = {isa = PBXBuildFile; fileRef = 91DA0CF12512BD5500A4CD47 /* Button Styles */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		2BBF230F251120790003D115 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBF2313251120790003D115 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2BBF2315251120790003D115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91DA0CED2512B28F00A4CD47 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		91DA0CEF2512B2D700A4CD47 /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
+		91DA0CF12512BD5500A4CD47 /* Button Styles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Button Styles"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +105,11 @@
 		2BBF22EC251120670003D115 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				91DA0CF12512BD5500A4CD47 /* Button Styles */,
+				91DA0CEC2512B26F00A4CD47 /* ViewModels */,
+				91DA0CEB2512B26000A4CD47 /* Models */,
 				2BBF22ED251120670003D115 /* ConversionsApp.swift */,
-				2BBF22EE251120670003D115 /* ContentView.swift */,
+				91DA0CEA2512B24B00A4CD47 /* Views */,
 				2BBF22EF251120790003D115 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -149,6 +159,30 @@
 				2BBF2315251120790003D115 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		91DA0CEA2512B24B00A4CD47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BBF22EE251120670003D115 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		91DA0CEB2512B26000A4CD47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91DA0CED2512B28F00A4CD47 /* Temperature.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		91DA0CEC2512B26F00A4CD47 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				91DA0CEF2512B2D700A4CD47 /* TemperatureViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BBF231A251120790003D115 /* Assets.xcassets in Resources */,
+				91DA0CF22512BD5500A4CD47 /* Button Styles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BBF231B251120790003D115 /* Assets.xcassets in Resources */,
+				91DA0CF32512BD5500A4CD47 /* Button Styles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +346,8 @@
 			files = (
 				2BBF2318251120790003D115 /* ContentView.swift in Sources */,
 				2BBF2316251120790003D115 /* ConversionsApp.swift in Sources */,
+				91DA0CEE2512B28F00A4CD47 /* Temperature.swift in Sources */,
+				91DA0CF02512B2D700A4CD47 /* TemperatureViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
