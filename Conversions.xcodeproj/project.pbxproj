@@ -18,6 +18,7 @@
 		2BD7698F251317F400974E93 /* LengthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7698E251317F400974E93 /* LengthViewModel.swift */; };
 		2BD7699125131AB100974E93 /* LengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7699025131AB100974E93 /* LengthView.swift */; };
 		2BD769952513294700974E93 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD769942513294700974E93 /* MainView.swift */; };
+		2BD769DA2513D41100974E93 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD769D92513D41100974E93 /* Length.swift */; };
 		91DA0CEE2512B28F00A4CD47 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA0CED2512B28F00A4CD47 /* Temperature.swift */; };
 		91DA0CF02512B2D700A4CD47 /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA0CEF2512B2D700A4CD47 /* TemperatureViewModel.swift */; };
 		91DA0CF22512BD5500A4CD47 /* Button Styles in Resources */ = {isa = PBXBuildFile; fileRef = 91DA0CF12512BD5500A4CD47 /* Button Styles */; };
@@ -59,6 +60,7 @@
 		2BD7698E251317F400974E93 /* LengthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthViewModel.swift; sourceTree = "<group>"; };
 		2BD7699025131AB100974E93 /* LengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthView.swift; sourceTree = "<group>"; };
 		2BD769942513294700974E93 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2BD769D92513D41100974E93 /* Length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		91DA0CED2512B28F00A4CD47 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		91DA0CEF2512B2D700A4CD47 /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
 		91DA0CF12512BD5500A4CD47 /* Button Styles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Button Styles"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				91DA0CED2512B28F00A4CD47 /* Temperature.swift */,
+				2BD769D92513D41100974E93 /* Length.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BBF2318251120790003D115 /* TempView.swift in Sources */,
+				2BD769DA2513D41100974E93 /* Length.swift in Sources */,
 				2BD769952513294700974E93 /* MainView.swift in Sources */,
 				2BBF2316251120790003D115 /* ConversionsApp.swift in Sources */,
 				2BD7699125131AB100974E93 /* LengthView.swift in Sources */,

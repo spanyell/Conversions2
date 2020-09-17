@@ -15,7 +15,7 @@ struct LengthView: View
     @State private var inputUnit = 0
     @State private var outputUnit = 0
     
-    var units = ["Inch", "Centimeter", "Mile", "Kilometer"]
+    var units = ["Inches", "Centimeters", "Miles", "Kilometers"]
     var body: some View
     {
         NavigationView
@@ -36,7 +36,9 @@ struct LengthView: View
                         {
                             Text("\(self.units[$0])")
                         }
-                    }
+                    }.frame(width: nil, height: 33)
+                    .pickerStyle(WheelPickerStyle())
+                    .labelsHidden()
                 }
                 
                 Section(header: Text("Converting to:"))
@@ -47,12 +49,15 @@ struct LengthView: View
                         {
                             Text("\(self.units[$0])")
                         }
-                    }
+                    }.frame(width: nil, height: 33)
+                    .pickerStyle(WheelPickerStyle())
+                    .labelsHidden()
                 }
                 
                 Section(header: Text("The Answer is:"))
                 {
-                    Text("\(Double().formattedDouble(value: lengthViewModel.convertedLength.length))")
+                    Text(String(format: "%.2f", lengthViewModel.convertedLength.length) + " " + units[outputUnit])
+                    
                 }
                 
                 Section
@@ -77,7 +82,7 @@ struct LengthView: View
                         .cornerRadius(5)
                         .disabled(numberOfUnit == "" || inputUnit == outputUnit)
                 }
-            }.navigationBarTitle("Conversions")
+            }.navigationBarTitle("Length Conversions")
         }
     }
 }

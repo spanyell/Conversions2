@@ -13,8 +13,10 @@ struct TempView: View
     @State private var numberOfUnit = ""
     @State private var inputUnit = 0
     @State private var outputUnit = 0
+    @State private var unitName = ""
     
     var units = ["Celsius", "Fahrenheit", "Kelvin"]
+    
 
     var body: some View
     {
@@ -25,9 +27,14 @@ struct TempView: View
                 Section
                 {
                     TextField("Enter the number of units here:", text: $numberOfUnit)
+                        .onAppear(perform: {unitName = ""})
                         .keyboardType(.decimalPad)
+                        .onChange(of: numberOfUnit, perform: { value in
+                            temperatureViewModel.convertedTemperature.temperature = ""
+                            unitName = ""
+                        })
                 }
-                
+                        
                 Section(header: Text("Choose units:"))
                 {
                     Picker("Select Unit", selection: $inputUnit)
@@ -37,6 +44,12 @@ struct TempView: View
                             Text("\(self.units[$0])")
                         }
                     }.pickerStyle(SegmentedPickerStyle())
+                    .onChange(of: inputUnit, perform: { value in
+                                temperatureViewModel.convertedTemperature.temperature = ""
+                        unitName = ""
+                    })
+                    
+                    
                 }
                 
                 Section(header: Text("Converting to:"))
@@ -48,11 +61,16 @@ struct TempView: View
                             Text("\(self.units[$0])")
                         }
                     }.pickerStyle(SegmentedPickerStyle())
+                    .onChange(of: outputUnit, perform: { value in
+                        temperatureViewModel.convertedTemperature.temperature = ""
+                        unitName = ""
+                    })
                 }
                 
                 Section(header: Text("The Answer is:"))
                 {
-                        Text("\(Double().formattedDouble(value: temperatureViewModel.convertedTemperature.temperature))")
+                    Text(temperatureViewModel.convertedTemperature.temperature + unitName)
+                    
                 }
                     
                 Section
@@ -65,7 +83,7 @@ struct TempView: View
                         
                         //  This is the line of code that keeps thowing the error.  There is nothing wrong with it that I can see...
                         temperatureViewModel.convertTemperature(numberOfUnit: numberOfUnit, inputUnit: inputUnit, outputUnit: outputUnit)
-                        
+                        unitName = "°" + " " + units[outputUnit]
                     },
                     label:
                     {
@@ -83,6 +101,7 @@ struct TempView: View
                 }
                 
             }.navigationBarTitle("Temp Conversions")
+            
         }
     }
 }

@@ -20,7 +20,7 @@ struct MainView: View
                     ZStack
                     {
                         RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                        LinearGradient(gradient: Gradient(colors: [.blue, .white]), startPoint: .leading, endPoint: .topTrailing)
+                        LinearGradient(gradient: Gradient(colors: [.purple, .orange]), startPoint: .leading, endPoint: .topTrailing)
                         RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
                         Text("Length Conversions").bold()
                             .foregroundColor(Color.black)
