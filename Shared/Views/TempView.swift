@@ -12,10 +12,16 @@ struct TempView: View
     
     @State private var numberOfUnit = ""
     @State private var inputUnit = 0
-    @State private var outputUnit = 0
+    @State private var outputUnit = 1
     @State private var unitName = ""
     
     var units = ["Celsius", "Fahrenheit", "Kelvin"]
+    
+    func clearAnswer()
+    {
+        temperatureViewModel.convertedTemperature.temperature = ""
+        unitName = ""
+    }
     
 
     var body: some View
@@ -30,8 +36,7 @@ struct TempView: View
                         .onAppear(perform: {unitName = ""})
                         .keyboardType(.decimalPad)
                         .onChange(of: numberOfUnit, perform: { value in
-                            temperatureViewModel.convertedTemperature.temperature = ""
-                            unitName = ""
+                            clearAnswer()
                         })
                 }
                         
@@ -45,8 +50,7 @@ struct TempView: View
                         }
                     }.pickerStyle(SegmentedPickerStyle())
                     .onChange(of: inputUnit, perform: { value in
-                                temperatureViewModel.convertedTemperature.temperature = ""
-                        unitName = ""
+                        clearAnswer()
                     })
                     
                     
@@ -62,8 +66,7 @@ struct TempView: View
                         }
                     }.pickerStyle(SegmentedPickerStyle())
                     .onChange(of: outputUnit, perform: { value in
-                        temperatureViewModel.convertedTemperature.temperature = ""
-                        unitName = ""
+                        clearAnswer()
                     })
                 }
                 
@@ -101,6 +104,9 @@ struct TempView: View
                 }
                 
             }.navigationBarTitle("Temp Conversions")
+            .onAppear(perform: {
+                clearAnswer()
+            })
             
         }
     }
