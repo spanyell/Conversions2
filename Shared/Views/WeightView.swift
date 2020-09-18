@@ -95,9 +95,8 @@ struct WeightView: View
                         .disabled(numberOfUnit == "" || inputUnit == outputUnit)
                 }
             }.navigationBarTitle("Weight Conversions")
-            .onAppear(perform: {
-                clearAnswer()
-                })
+            .onAppear(perform:
+                clearAnswer)
         }
     }
 }

@@ -102,9 +102,8 @@ struct LengthView: View
                 }
             }
             .navigationBarTitle("Length Conversions")
-            .onAppear(perform: {
-                clearAnswer()
-            })
+            .onAppear(perform:
+                clearAnswer)
         }
     }
 }

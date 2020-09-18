@@ -103,9 +103,8 @@ struct TempView: View
                 }
                 
             }.navigationBarTitle("Temp Conversions")
-            .onAppear(perform: {
-                clearAnswer()
-            })
+            .onAppear(perform:
+                clearAnswer)
             
         }
     }

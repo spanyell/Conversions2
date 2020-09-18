@@ -95,9 +95,8 @@ struct VolumeView: View
                         .disabled(numberOfUnit == "" || inputUnit == outputUnit)
                 }
             }.navigationBarTitle("Volume Conversions")
-            .onAppear(perform: {
-                clearAnswer()
-                })
+            .onAppear(perform:
+                clearAnswer)
         }
     }
 }
