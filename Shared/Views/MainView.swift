@@ -33,7 +33,7 @@ struct MainView: View
                         RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
                         LinearGradient(gradient: Gradient(colors: [.blue, .red]), startPoint: .leading, endPoint: .topTrailing)
                         RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
-                        Text("Temp Conversions").bold()
+                        Text("Temperature Conversions").bold()
                             .foregroundColor(Color.black)
                     }.padding()
                 }
@@ -48,7 +48,7 @@ struct MainView: View
                             .foregroundColor(Color.black)
                     }.padding()
                 }
-                NavigationLink(destination: PlaceholderView())
+                NavigationLink(destination: WeightView(weightViewModel: WeightViewModel()))
                 {
                     ZStack
                     {
@@ -65,15 +65,15 @@ struct MainView: View
     }
 }
 
-struct PlaceholderView: View {
-    var body: some View {
-        NavigationView {
-            VStack {
-                Text("This shit ain't done yet.")
-            }
-        }
-    }
-}
+//struct PlaceholderView: View {
+//    var body: some View {
+//        NavigationView {
+//            VStack {
+//                Text("This shit ain't done yet.")
+//            }
+//        }
+//    }
+//}
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

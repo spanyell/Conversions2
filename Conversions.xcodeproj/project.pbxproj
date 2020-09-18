@@ -11,6 +11,8 @@
 		2B40ED4F2514F8FA0064F460 /* Volume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B40ED4E2514F8FA0064F460 /* Volume.swift */; };
 		2B40ED552514F9B70064F460 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B40ED542514F9B70064F460 /* VolumeView.swift */; };
 		2B40ED5B2514FCC80064F460 /* VolumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B40ED5A2514FCC80064F460 /* VolumeViewModel.swift */; };
+		2B40ED6525150EC80064F460 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B40ED6425150EC80064F460 /* WeightView.swift */; };
+		2B40ED6B25150FDA0064F460 /* WeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B40ED6A25150FDA0064F460 /* WeightViewModel.swift */; };
 		2BBF2309251120790003D115 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF2308251120790003D115 /* Tests_iOS.swift */; };
 		2BBF2314251120790003D115 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF2313251120790003D115 /* Tests_macOS.swift */; };
 		2BBF2316251120790003D115 /* ConversionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF22ED251120670003D115 /* ConversionsApp.swift */; };
@@ -51,6 +53,8 @@
 		2B40ED4E2514F8FA0064F460 /* Volume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volume.swift; sourceTree = "<group>"; };
 		2B40ED542514F9B70064F460 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		2B40ED5A2514FCC80064F460 /* VolumeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewModel.swift; sourceTree = "<group>"; };
+		2B40ED6425150EC80064F460 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
+		2B40ED6A25150FDA0064F460 /* WeightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewModel.swift; sourceTree = "<group>"; };
 		2BBF22ED251120670003D115 /* ConversionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionsApp.swift; sourceTree = "<group>"; };
 		2BBF22EE251120670003D115 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		2BBF22EF251120790003D115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				2BD769942513294700974E93 /* MainView.swift */,
 				2BD7699025131AB100974E93 /* LengthView.swift */,
 				2B40ED542514F9B70064F460 /* VolumeView.swift */,
+				2B40ED6425150EC80064F460 /* WeightView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				2BD7698E251317F400974E93 /* LengthViewModel.swift */,
 				2B40ED5A2514FCC80064F460 /* VolumeViewModel.swift */,
 				91DA0CEF2512B2D700A4CD47 /* TemperatureViewModel.swift */,
+				2B40ED6A25150FDA0064F460 /* WeightViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -370,11 +376,13 @@
 			files = (
 				2BBF2318251120790003D115 /* TempView.swift in Sources */,
 				2BD769DA2513D41100974E93 /* Length.swift in Sources */,
+				2B40ED6525150EC80064F460 /* WeightView.swift in Sources */,
 				2BD769952513294700974E93 /* MainView.swift in Sources */,
 				2BBF2316251120790003D115 /* ConversionsApp.swift in Sources */,
 				2B40ED552514F9B70064F460 /* VolumeView.swift in Sources */,
 				2BD7699125131AB100974E93 /* LengthView.swift in Sources */,
 				2B40ED4F2514F8FA0064F460 /* Volume.swift in Sources */,
+				2B40ED6B25150FDA0064F460 /* WeightViewModel.swift in Sources */,
 				91DA0CEE2512B28F00A4CD47 /* Temperature.swift in Sources */,
 				2B40ED5B2514FCC80064F460 /* VolumeViewModel.swift in Sources */,
 				91DA0CF02512B2D700A4CD47 /* TemperatureViewModel.swift in Sources */,
