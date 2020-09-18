@@ -37,7 +37,7 @@ struct MainView: View
                             .foregroundColor(Color.black)
                     }.padding()
                 }
-                NavigationLink(destination: PlaceholderView())
+                NavigationLink(destination: VolumeView(volumeViewModel: VolumeViewModel()))
                 {
                     ZStack
                     {
