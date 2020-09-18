@@ -14,8 +14,16 @@ struct LengthView: View
     @State private var numberOfUnit = ""
     @State private var inputUnit = 0
     @State private var outputUnit = 0
+    @State private var unitName = ""
     
     var units = ["Inches", "Centimeters", "Miles", "Kilometers"]
+    
+    func clearAnswer()
+    {
+        lengthViewModel.convertedLength.length = ""
+        unitName = ""
+    }
+    
     var body: some View
     {
         NavigationView
@@ -26,6 +34,9 @@ struct LengthView: View
                 {
                     TextField("Enter the number of units here:", text: $numberOfUnit)
                         .keyboardType(.decimalPad)
+                        .onChange(of: numberOfUnit, perform: {value in
+                            clearAnswer()
+                        })
                 }
                 
                 Section(header: Text("Choose units:"))
@@ -39,6 +50,9 @@ struct LengthView: View
                     }.frame(width: nil, height: 33)
                     .pickerStyle(WheelPickerStyle())
                     .labelsHidden()
+                    .onChange(of: inputUnit, perform: { value in
+                        clearAnswer()
+                    })
                 }
                 
                 Section(header: Text("Converting to:"))
@@ -52,11 +66,14 @@ struct LengthView: View
                     }.frame(width: nil, height: 33)
                     .pickerStyle(WheelPickerStyle())
                     .labelsHidden()
+                    .onChange(of: outputUnit, perform: { value in
+                        clearAnswer()
+                    })
                 }
                 
                 Section(header: Text("The Answer is:"))
                 {
-                    Text(String(format: "%.2f", lengthViewModel.convertedLength.length) + " " + units[outputUnit])
+                    Text(lengthViewModel.convertedLength.length + unitName)
                     
                 }
                 
@@ -67,6 +84,7 @@ struct LengthView: View
                                 print("Button was clicked...")
                                 
                                 lengthViewModel.convertLength(numberOfUnit: numberOfUnit, inputUnit: inputUnit, outputUnit: outputUnit)
+                                unitName = " " + units[outputUnit]
                                 
                             },
                            label:
@@ -83,6 +101,9 @@ struct LengthView: View
                         .disabled(numberOfUnit == "" || inputUnit == outputUnit)
                 }
             }.navigationBarTitle("Length Conversions")
+            .onAppear(perform: {
+                clearAnswer()
+            })
         }
     }
 }

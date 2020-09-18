@@ -10,5 +10,5 @@ import Foundation
 struct Length : Identifiable
 {
     let id = UUID()
-    var length: Double
+    var length = ""
 }

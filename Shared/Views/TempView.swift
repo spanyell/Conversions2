@@ -33,7 +33,6 @@ struct TempView: View
                 Section
                 {
                     TextField("Enter the number of units here:", text: $numberOfUnit)
-                        .onAppear(perform: {unitName = ""})
                         .keyboardType(.decimalPad)
                         .onChange(of: numberOfUnit, perform: { value in
                             clearAnswer()
