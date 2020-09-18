@@ -100,7 +100,8 @@ struct LengthView: View
                         .cornerRadius(5)
                         .disabled(numberOfUnit == "" || inputUnit == outputUnit)
                 }
-            }.navigationBarTitle("Length Conversions")
+            }
+            .navigationBarTitle("Length Conversions")
             .onAppear(perform: {
                 clearAnswer()
             })

@@ -20,7 +20,7 @@ struct MainView: View
                     ZStack
                     {
                         RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                        LinearGradient(gradient: Gradient(colors: [.purple, .orange]), startPoint: .leading, endPoint: .topTrailing)
+                        LinearGradient(gradient: Gradient(colors: [.gray, .white]), startPoint: .leading, endPoint: .topTrailing)
                         RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
                         Text("Length Conversions").bold()
                             .foregroundColor(Color.black)
@@ -31,7 +31,7 @@ struct MainView: View
                     ZStack
                     {
                         RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                        LinearGradient(gradient: Gradient(colors: [.blue, .red]), startPoint: .leading, endPoint: .topTrailing)
+                        LinearGradient(gradient: Gradient(colors: [.white, .gray]), startPoint: .leading, endPoint: .topTrailing)
                         RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
                         Text("Temperature Conversions").bold()
                             .foregroundColor(Color.black)
@@ -42,7 +42,7 @@ struct MainView: View
                     ZStack
                     {
                         RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                        LinearGradient(gradient: Gradient(colors: [.blue, .white]), startPoint: .bottom, endPoint: .top)
+                        LinearGradient(gradient: Gradient(colors: [.gray, .white]), startPoint: .bottom, endPoint: .top)
                         RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
                         Text("Volume Conversions").bold()
                             .foregroundColor(Color.black)
@@ -53,14 +53,13 @@ struct MainView: View
                     ZStack
                     {
                         RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                        AngularGradient(gradient: Gradient(colors: [.red, .orange, .yellow, .green, .blue, .purple]), center: .center)
+                        LinearGradient(gradient: Gradient(colors: [.white, .gray]), startPoint: .top, endPoint: .bottom)
                         RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
                         Text("Weight Conversions").bold()
                             .foregroundColor(Color.black)
                     }.padding()
                 }.navigationBarTitle("Conversions")
-            
-            }
+            }.background(LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom))
         }
     }
 }
